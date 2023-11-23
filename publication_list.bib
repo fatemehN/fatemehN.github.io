@@ -1,0 +1,90 @@
+
+
+@STRING{CVPR = {Proc. IEEE Conf. on Computer Vision and Pattern	Recognition (CVPR)}}
+@STRING{ECCV = {Proc. of the European Conf. on Computer Vision (ECCV)}}
+@STRING{ICCV = {Proc. of the IEEE International Conf. on Computer Vision (ICCV)}}
+@STRING{THREEDV = {Proc. of the International Conf. on 3D Vision (3DV)}}
+@STRING{NEURIPS = {Advances in Neural Information Processing Systems (NeurIPS)}}
+@STRING{ARXIV = {arXiv.org}}
+@STRING{SPIS = {Signal Processing and Intelligent Systems Conference (SPIS)}}
+@STRING{SIVP = {Signal, Image and Video Processing}}
+@STRING{MTA = {Multimedia Tools and Applications}}
+@STRING{SSRN = {SSRN Scholarly Paper}}
+
+
+
+@misc{nourilenjan_nokabadi_-multivariational_2023,
+	address = {Rochester, NY},
+	type = {SSRN Scholarly Paper},
+	title = {Β-Multivariational Autoencoder for Entangled Representation Learning in Video Frames},
+	booktitle = SSRN,
+	img = {assets/img/publications/Bmvae.png},
+	html = {https://papers.ssrn.com/abstract=4364375},
+	doi = {10.2139/ssrn.4364375},
+	abstract = {In learning sequential decision-making where a set of actions are predicted from the states and previous reward, it is critical to choose actions from a proper distribution. Learning a known prior from data, on the other hand, becomes more challenging when the number of latent variables exceeds two and every two variables is related to each other via a covariance value. Moreover, many posterior estimation approaches experience posterior collapse when the data is large and diverse. In this paper, we propose the β-Multivariational Autoencoder (βMVAE) to learn a Multivariate Gaussian prior from video frames for use as part of a single object-tracking in form of a decision-making process. We present a novel formulation for object motion in videos with a set of dependent parameters to address a single object-tracking task. The true values of the motion parameters are obtained through data analysis on the training set. The parameters population is then assumed to have a Multivariate Gaussian distribution. The βMVAE is developed to learn this entangled prior p = N(µ,Σ) directly from frame patches where the output is the object masks of the frame patches. We devise a bottleneck to estimate the posterior’s parameters, i.e. µ',Σ'. Via a new reparameterization trick, we learn the likelihood p(xˆ{\textbar}z) as the object mask of the input. Furthermore, we alter the neural network of βMVAE with the U-Net architecture and name the new network βMultivariational U-Net (βMVUnet). Our networks are trained from scratch via over 85k video frames for 24 (βMVUnet) and 78 (βMVAE) million steps. We show that βMVUnet enhances both posterior estimation and segmentation functioning over the test set. Our code and the trained networks are publicly released on Github.},
+	language = {en},
+	urldate = {2023-11-23},
+	author = {Nourilenjan Nokabadi, Fatemeh and Bergevin, Robert},
+	month = feb,
+	year = {2023},
+	keywords = {Representation learning, Video object segmentation, posterior estimation, variational inferences},
+	code = {https://github.com/fatemehN/entangled_representation}
+}
+
+
+
+@article{nouri_salient_2018,
+	title = {Salient object detection method using random graph},
+	booktitle = MTA,
+	img = {assets/img/publications/rg_method2.png},
+	volume = {77},
+	issn = {1573-7721},
+	html = {https://doi.org/10.1007/s11042-018-5668-3},
+	doi = {10.1007/s11042-018-5668-3},
+	abstract = {In this paper, a bottom-up salient object detection method is proposed by modeling image as a random graph. The proposed method starts with portioning input image into superpixels and extracting color and spatial features for each superpixel. Then, a complete graph is constructed by employing superpixels as nodes. A high edge weight is assigned into a pair of superpixels if they have high similarity. Next, a random walk prior on nodes is assumed to generate the probability distribution on edges. On the other hand, a complete directed graph is created that each edge weight represents the probability for transmitting random walker from current node to next node. By considering a threshold and eliminating edges with higher probability than the threshold, a random graph is created to model input image. The inbound degree vector of a random graph is computed to determine the most salient nodes (regions). Finally, a propagation technique is used to form saliency map. Experimental results on two challenging datasets: MSRA10K and SED2 demonstrate the efficiency of the proposed unsupervised RG method in comparison with the state-of-the-art unsupervised methods.},
+	language = {en},
+	number = {19},
+	urldate = {2023-11-23},
+	journal = {Multimedia Tools and Applications},
+	author = {Nouri, Fatemeh and Kazemi, Kamran and Danyali, Habibollah},
+	month = oct,
+	year = {2018},
+	keywords = {Detection, Random graph, Random walk prior, Saliency map, Salient object},
+	pages = {24681--24699},
+}
+
+
+@article{nouri_salient_2018-1,
+	title = {Salient object detection using local, global and high contrast graphs},
+	booktitle = SIVP,
+	img = {assets/img/publications/global_high.png},
+	volume = {12},
+	issn = {1863-1711},
+	html = {https://doi.org/10.1007/s11760-017-1205-5},
+	doi = {10.1007/s11760-017-1205-5},
+	abstract = {In this paper, we propose a novel multi-graph-based method for salient object detection in natural images. Starting from image decomposition via a superpixel generation algorithm, we utilize color, spatial and background label to calculate edge weight matrix of the graphs. By considering superpixels as the nodes and region similarities as the edge weights, local, global and high contrast graphs are created. Then, an integration technique is applied to form the saliency maps using degree vectors of the graphs. Extensive experiments on three challenging datasets show that the proposed unsupervised method outperforms the several different state-of-the-art unsupervised methods.},
+	language = {en},
+	number = {4},
+	urldate = {2023-11-23},
+	journal = {Signal, Image and Video Processing},
+	author = {Nouri, Fatemeh and Kazemi, Kamran and Danyali, Habibollah},
+	month = may,
+	year = {2018},
+	keywords = {Graph theory, Integration technique, Saliency, Saliency map, Salient object detection},
+	pages = {659--667},
+}
+
+@inproceedings{nouri_salient_2015,
+	title = {Salient object detection via global contrast graph},
+	html = {https://ieeexplore.ieee.org/abstract/document/7422332},
+	doi = {10.1109/SPIS.2015.7422332},
+	img = {assets/img/publications/gg2.png},
+	poster = {assets/pdf/ICSPIS 2015.pdf},
+	abstract = {In this paper, we propose an unsupervised bottom-up method which formulates salient object detection problem as finding salient vertices of a graph. Global contrast is extracted in a novel graph-based framework to determine localization of salient objects. Saliency values are assigned to regions in terms of nodes degrees on graph. The proposed method has been applied on SED2 dataset. The qualitative and quantitative evaluation of the proposed method show that it can detect the salient objects appropriately in comparison with 5 state-of-art saliency models.},
+	urldate = {2023-11-23},
+	booktitle = SPIS,
+	author = {Nouri, Fatemeh and Kazemi, Kamran and Danyali, Habibollah},
+	month = dec,
+	year = {2015},
+	pages = {159--163},
+}
