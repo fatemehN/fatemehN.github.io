@@ -32,10 +32,14 @@ h1 {
 }
 
 .links a {
-    margin-right: 15px;
+    margin-right: 10px;
     text-decoration: none;
     color: #2563eb;
-    font-weight: 500;
+    font-weight: 400;
+    font-size: 13px;
+}
+.links {
+    margin-top: 6px;
 }
 
 .links a:hover {
