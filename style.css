@@ -106,7 +106,8 @@ ul {
 .title-row {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between;  /* pushes image to the right */
+    width: 100%;
 }
 
 .title-row h1 {
@@ -115,11 +116,12 @@ ul {
 }
 
 .profile-pic {
-    width: 55px;        /* 👈 small and clean */
-    height: 55px;
+    width: 50px;        /* small and controlled */
+    height: 50px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #e5e7eb;
+    flex-shrink: 0;     /* prevents weird resizing */
 }
 footer {
     text-align: center;
