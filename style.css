@@ -15,8 +15,8 @@ header {
     margin-bottom: 40px;
 }
 .header-image img {
-    width: 110px;        /* smaller size */
-    height: 110px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
     border-radius: 50%;
     border: 2px solid #e5e7eb;
