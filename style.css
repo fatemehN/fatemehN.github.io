@@ -26,7 +26,6 @@ header {
 .header-content-left {
     display: flex;
     flex-direction: column;
-    flex: 1;
 }
 
 h1 {
@@ -62,7 +61,6 @@ h1 {
     object-fit: cover;
     border-radius: 50%;
     border: 2px solid #e5e7eb;
-    margin-left: 20px;
     flex-shrink: 0;
 }
 
@@ -143,19 +141,13 @@ footer {
     font-size: 14px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .header-container {
         flex-direction: column-reverse;
         text-align: center;
-    }
-    .header-content-left {
-        align-items: center;
+        gap: 20px;
     }
     .links {
         justify-content: center;
-    }
-    .profile-pic {
-        margin-left: 0;
-        margin-bottom: 20px;
     }
 }
