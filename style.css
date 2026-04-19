@@ -103,24 +103,60 @@ ul {
     margin-bottom: 30px;
 }
 
-.title-row {
+.header-content {
     display: flex;
-    align-items: center;
-    justify-content: space-between;  /* pushes image to the right */
-    width: 100%;
+    justify-content: space-between; 
+    align-items: center;           
+    margin-bottom: 20px;
 }
 
-.title-row h1 {
-    margin: 0;
-    font-size: 34px;
+.card a, 
+ul li a {
+    font-size: 13px;      
+    font-weight: 500;      
+    text-decoration: none;
+    padding: 2px 4px;      
 }
+
+.card a {
+    color: #2563eb;
+    background-color: #f3f4f6; /* Light gray background */
+    border-radius: 4px;
+    margin-right: 5px;
+    transition: background-color 0.2s;
+}
+
+.card a:hover {
+    background-color: #e5e7eb;
+    text-decoration: none;
+}
+
+.title-row {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;       
+    width: 100%;
+    gap: 20px;                      
+}
+
 .profile-pic {
-    width: 50px;        /* small and controlled */
-    height: 50px;
+    width: 120px;         
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #e5e7eb;
-    flex-shrink: 0;     /* prevents weird resizing */
+    flex-shrink: 0;       
+}
+
+@media (max-width: 600px) {
+    .title-row {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+    .profile-pic {
+        margin-bottom: 20px;
+    }
 }
 
 footer {
