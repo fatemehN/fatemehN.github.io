@@ -136,14 +136,7 @@ ul li a {
     margin-bottom: 10px;
 }
 
-footer {
-    text-align: center;
-    margin-top: 40px;
-    color: #6b7280;
-    font-size: 14px;
-}
-
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .header-container {
         flex-direction: column-reverse;
         text-align: center;
@@ -155,4 +148,11 @@ footer {
     .profile-pic {
         margin-left: 0;
     }
+} */
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #6b7280;
+    font-size: 14px;
 }
