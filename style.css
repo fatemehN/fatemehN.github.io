@@ -15,8 +15,8 @@ header {
     margin-bottom: 40px;
 }
 .header-image img {
-    width: 300px;
-    height: 300px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
     border-radius: 50%;
     border: 2px solid #e5e7eb;
@@ -113,6 +113,14 @@ ul {
 .title-row h1 {
     margin: 0;
     font-size: 34px;
+}
+.profile-pic {
+    width: 50px;        /* small and controlled */
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e5e7eb;
+    flex-shrink: 0;     /* prevents weird resizing */
 }
 
 footer {
