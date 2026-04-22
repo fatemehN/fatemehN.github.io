@@ -27,14 +27,8 @@ jobs:
         run: npx html-validate index.html publications.html
 
   link-check:
-    name: Link check (advisory)
+    name: Link check
     runs-on: ubuntu-latest
-    # Advisory only: most academic / publisher sites (openreview, neurips,
-    # papers.ssrn, ulaval, mila, springer, doi.org, ieee) block non-browser
-    # user agents, and even github.io returns 403 to lychee. A failing link
-    # check here is almost always a false positive, so we never block merges
-    # on it. Check the job output manually if you want to audit the report.
-    continue-on-error: true
     steps:
       - uses: actions/checkout@v4
 
@@ -46,11 +40,12 @@ jobs:
             --no-progress
             --max-retries 3
             --retry-wait-time 5
-            --accept 200,203,206,403,429
+            --accept 200,203,206,429
+            --exclude-mail
             --exclude "scholar\.google\.com"
             --exclude "linkedin\.com"
             './**/*.html'
-          fail: false
+          fail: true
 
   accessibility:
     name: Accessibility (pa11y)
