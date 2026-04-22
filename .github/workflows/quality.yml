@@ -40,8 +40,7 @@ jobs:
             --no-progress
             --max-retries 3
             --retry-wait-time 5
-            --accept 200,203,206,429
-            --exclude-mail
+            --accept 200,203,206,403,429
             --exclude "scholar\.google\.com"
             --exclude "linkedin\.com"
             './**/*.html'
