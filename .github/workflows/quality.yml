@@ -1,0 +1,80 @@
+name: Quality checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  html-validate:
+    name: HTML validation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install html-validate
+        run: npm install --no-save html-validate@9
+
+      - name: Validate HTML
+        run: npx html-validate index.html publications.html
+
+  link-check:
+    name: Link check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --verbose
+            --no-progress
+            --max-retries 3
+            --retry-wait-time 5
+            --accept 200,203,206,429
+            --exclude-mail
+            --exclude "scholar\.google\.com"
+            --exclude "linkedin\.com"
+            './**/*.html'
+          fail: true
+
+  accessibility:
+    name: Accessibility (pa11y)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install pa11y-ci and http-server
+        run: npm install --no-save pa11y-ci@3 http-server@14
+
+      - name: Serve site in background
+        run: nohup npx http-server -p 8080 -s . > http-server.log 2>&1 &
+
+      - name: Wait for server
+        run: |
+          for i in 1 2 3 4 5 6 7 8 9 10; do
+            if curl -sSf http://localhost:8080/index.html > /dev/null; then
+              echo "Server is up"
+              exit 0
+            fi
+            sleep 1
+          done
+          echo "Server did not start in time"
+          cat http-server.log
+          exit 1
+
+      - name: Run pa11y-ci
+        run: npx pa11y-ci --config .pa11yci.json
