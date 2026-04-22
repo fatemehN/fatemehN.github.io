@@ -136,6 +136,48 @@ ul li a {
     margin-bottom: 10px;
 }
 
+.page-nav {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.page-nav a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.page-nav a:hover {
+    text-decoration: underline;
+}
+
+.pub {
+    padding: 18px 20px;
+}
+
+.pub-title {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 6px;
+    line-height: 1.35;
+}
+
+.pub-authors {
+    font-size: 14px;
+    color: #374151;
+    margin-bottom: 4px;
+}
+
+.pub-venue {
+    font-size: 13px;
+    margin: 2px 0 10px 0;
+}
+
+.pub-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 15px;
+}
+
 @media (max-width: 768px) {
     .header-container {
         flex-direction: column-reverse;
