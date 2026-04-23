@@ -166,6 +166,24 @@ ul li a {
     user-select: none;
 }
 
+@media (min-width: 769px) {
+    .project-carousel {
+        display: block;
+        overflow: visible;
+        scroll-snap-type: none;
+        padding: 0;
+        margin-top: 0;
+    }
+
+    .project-carousel > .project-slide {
+        margin-top: 20px;
+    }
+
+    .swipe-hint {
+        display: none;
+    }
+}
+
 .page-nav {
     margin-bottom: 20px;
     font-size: 14px;
