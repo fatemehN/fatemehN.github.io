@@ -135,9 +135,9 @@
     <div class="card project-slide">
         <div class="project-title">Representation Learning for Video Understanding</div>
         <ul>
-            <li>Developed models for disentangled representation learning in video data.</li>
-            <li>Separated motion and appearance factors in complex scenes.</li>
-            <li>Improved downstream tasks like segmentation and temporal reasoning.</li>
+            <li>Framed single-object tracking as a reinforcement-learning episodic task with a Soft-Actor-Critic agent learning a motion policy from video frames.</li>
+            <li>Proposed the &beta;-Multivariational Autoencoder (&beta;MVAE) and a U-Net variant (&beta;MVUNet) to learn an entangled Multivariate Gaussian prior (mean vector and covariance matrix) over the tracker's correlated motion parameters directly from frame patches.</li>
+            <li>Jointly trained the decoder to predict the target's binary segmentation mask, so a single network learns the motion distribution and the per-frame object mask used by the tracker.</li>
         </ul>
 
         <div class="project-links">
