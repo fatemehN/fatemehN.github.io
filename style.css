@@ -12,8 +12,10 @@
     color-scheme: light;
 }
 
+/* Dark theme: follows the device setting unless the visitor chose light,
+   or is forced by the toggle (data-theme="dark", set in theme.js). */
 @media (prefers-color-scheme: dark) {
-    :root {
+    :root:not([data-theme="light"]) {
         --bg: #0b1120;
         --surface: #131c2e;
         --text: #e2e8f0;
@@ -26,6 +28,20 @@
         --chip-bg: #1c2840;
         color-scheme: dark;
     }
+}
+
+:root[data-theme="dark"] {
+    --bg: #0b1120;
+    --surface: #131c2e;
+    --text: #e2e8f0;
+    --text-muted: #a5b4c8;
+    --text-subtle: #94a3b8;
+    --border: #24324a;
+    --accent: #7cb1ff;
+    --accent-soft: #15233d;
+    --accent-border: #2b4572;
+    --chip-bg: #1c2840;
+    color-scheme: dark;
 }
 
 * {
@@ -159,10 +175,18 @@ h1 {
 
 /* ---------- Tabs ---------- */
 
+.tab-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid var(--border);
+}
+
 .tabs {
     display: flex;
+    flex: 1;
+    min-width: 0;
     gap: 4px;
-    border-bottom: 1px solid var(--border);
     overflow-x: auto;
 }
 
@@ -174,7 +198,6 @@ h1 {
     background: none;
     border: none;
     border-bottom: 2px solid transparent;
-    margin-bottom: -1px;
     padding: 10px 14px;
     cursor: pointer;
     white-space: nowrap;
@@ -465,4 +488,59 @@ footer {
     flex-wrap: wrap;
     gap: 6px;
     margin-top: 8px;
+}
+
+/* ---------- Theme toggle ---------- */
+
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.theme-toggle {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background: var(--surface);
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.theme-toggle[hidden] {
+    display: none;
+}
+
+.theme-toggle:hover {
+    color: var(--accent);
+    border-color: var(--accent-border);
+    background: var(--accent-soft);
+}
+
+.theme-toggle svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Show the moon in light mode (switch to dark) and the sun in dark mode. */
+.theme-toggle .icon-sun,
+:root[data-theme="dark"] .theme-toggle .icon-moon {
+    display: none;
+}
+
+:root[data-theme="dark"] .theme-toggle .icon-sun {
+    display: block;
+}
+
+.item-detail {
+    display: block;
+    color: var(--text-muted);
+    font-size: 15px;
 }
