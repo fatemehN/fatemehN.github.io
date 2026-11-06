@@ -88,6 +88,7 @@
             <button type="button" class="tab" role="tab" id="tab-publications" aria-controls="publications" aria-selected="false" tabindex="-1">Publications</button>
             <button type="button" class="tab" role="tab" id="tab-academic-service" aria-controls="academic-service" aria-selected="false" tabindex="-1">Academic Service</button>
             <button type="button" class="tab" role="tab" id="tab-awards" aria-controls="awards" aria-selected="false" tabindex="-1">Awards &amp; Talks</button>
+            <button type="button" class="tab" role="tab" id="tab-gallery" aria-controls="gallery" aria-selected="false" tabindex="-1">Gallery</button>
         </div>
         <button type="button" class="theme-toggle" aria-label="Switch to dark mode" hidden>
             <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
@@ -386,11 +387,195 @@
         </div>
     </section>
 
+    <!-- GALLERY -->
+    <section id="gallery" class="tab-panel" role="tabpanel" aria-labelledby="tab-gallery">
+        <div class="card">
+            <h2 class="card-heading">Little Eternities</h2>
+            <p class="gallery-intro">Away from models and datasets, I photograph the sky and the natural world: sunsets, storms, starry nights and the light on a landscape. Here are some favourites.</p>
+        </div>
+        <!--
+            To add a photo: put a small version (about 900px, for the grid) and a large one (about 2000px,
+            for the full-screen view) in assets/img/gallery/, then copy this block into the grid below.
+            Give the small version's width/height so the page doesn't jump while photos load.
+
+            <figure class="gallery-item">
+                <button type="button" class="gallery-open" data-full="assets/img/gallery/sunset-river.webp" aria-label="View larger: Sunset over the river">
+                    <img src="assets/img/gallery/sunset-river-sm.webp" alt="Orange sunset over the river" width="900" height="600" loading="lazy">
+                </button>
+                <figcaption>Sunset over the river · Quebec City, 2025</figcaption>
+            </figure>
+        -->
+        <div class="gallery-grid">
+            <figure class="gallery-item">
+                <button type="button" class="gallery-open" data-full="assets/img/gallery/ice-coated-trees.webp" aria-label="View larger: Ice-coated branches at sunrise">
+                    <img src="assets/img/gallery/ice-coated-trees-sm.webp" alt="Tall trees coated in ice glittering in low winter sun against a blue sky, over a snowy path" width="675" height="900" loading="lazy">
+                </button>
+                <figcaption>Ice-coated branches at sunrise</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <button type="button" class="gallery-open" data-full="assets/img/gallery/river-sunset.webp" aria-label="View larger: Sunset over the river">
+                    <img src="assets/img/gallery/river-sunset-sm.webp" alt="An orange sun setting over a wide river, its reflection a bright golden path across the water to a rocky shore" width="675" height="900" loading="lazy">
+                </button>
+                <figcaption>Sunset over the river</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <button type="button" class="gallery-open" data-full="assets/img/gallery/rain-over-lake.webp" aria-label="View larger: Rain sweeping over the lake">
+                    <img src="assets/img/gallery/rain-over-lake-sm.webp" alt="View from a mountaintop of rain curtains falling over forested hills and a small lake" width="900" height="675" loading="lazy">
+                </button>
+                <figcaption>Rain sweeping over the lake</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <button type="button" class="gallery-open" data-full="assets/img/gallery/autumn-reflection.webp" aria-label="View larger: Autumn in the reflection">
+                    <img src="assets/img/gallery/autumn-reflection-sm.webp" alt="Clouds, trees and a green footbridge reflected in a still pond scattered with fallen autumn leaves" width="675" height="900" loading="lazy">
+                </button>
+                <figcaption>Autumn in the reflection</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <button type="button" class="gallery-open" data-full="assets/img/gallery/milky-way-autumn.webp" aria-label="View larger: The Milky Way through autumn leaves">
+                    <img src="assets/img/gallery/milky-way-autumn-sm.webp" alt="The Milky Way across a dark starry sky, framed by orange-lit autumn branches" width="900" height="675" loading="lazy">
+                </button>
+                <figcaption>The Milky Way through autumn leaves</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <button type="button" class="gallery-open" data-full="assets/img/gallery/shelf-cloud-geese.webp" aria-label="View larger: Shelf cloud and migrating geese">
+                    <img src="assets/img/gallery/shelf-cloud-geese-sm.webp" alt="A long V of geese flying beneath the edge of a huge layered shelf cloud over an icy river" width="675" height="900" loading="lazy">
+                </button>
+                <figcaption>Shelf cloud and migrating geese</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <button type="button" class="gallery-open" data-full="assets/img/gallery/snow-laden-branches.webp" aria-label="View larger: Snow on the crabapple branches">
+                    <img src="assets/img/gallery/snow-laden-branches-sm.webp" alt="Branches heavy with fresh snow and dark winter berries arching over a snowy path" width="675" height="900" loading="lazy">
+                </button>
+                <figcaption>Snow on the crabapple branches</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <button type="button" class="gallery-open" data-full="assets/img/gallery/fiery-clouds.webp" aria-label="View larger: Clouds on fire at dusk">
+                    <img src="assets/img/gallery/fiery-clouds-sm.webp" alt="A band of clouds glowing bright orange and gold at sunset above silhouetted trees and buildings" width="900" height="675" loading="lazy">
+                </button>
+                <figcaption>Clouds on fire at dusk</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <button type="button" class="gallery-open" data-full="assets/img/gallery/lamplit-path.webp" aria-label="View larger: Lamplight on an autumn path">
+                    <img src="assets/img/gallery/lamplit-path-sm.webp" alt="A park path lined with yellow autumn trees, glowing lamps leading into the distance at dusk" width="675" height="900" loading="lazy">
+                </button>
+                <figcaption>Lamplight on an autumn path</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <button type="button" class="gallery-open" data-full="assets/img/gallery/marina-golden-hour.webp" aria-label="View larger: Golden hour at the marina">
+                    <img src="assets/img/gallery/marina-golden-hour-sm.webp" alt="Sailboats moored in a calm bay reflecting golden-lit clouds and forested mountains" width="900" height="676" loading="lazy">
+                </button>
+                <figcaption>Golden hour at the marina</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <button type="button" class="gallery-open" data-full="assets/img/gallery/storm-over-valley.webp" aria-label="View larger: A storm building over the valley">
+                    <img src="assets/img/gallery/storm-over-valley-sm.webp" alt="Dark storm clouds and falling rain over a wide forested valley, seen from a granite cliff" width="900" height="675" loading="lazy">
+                </button>
+                <figcaption>A storm building over the valley</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <button type="button" class="gallery-open" data-full="assets/img/gallery/icy-trees-silver-sun.webp" aria-label="View larger: Silver sun through icy trees">
+                    <img src="assets/img/gallery/icy-trees-silver-sun-sm.webp" alt="Ice-glazed bare trees silhouetted against a soft sun behind clouds, above a glistening snowbank" width="675" height="900" loading="lazy">
+                </button>
+                <figcaption>Silver sun through icy trees</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <button type="button" class="gallery-open" data-full="assets/img/gallery/fallen-leaves.webp" aria-label="View larger: A carpet of fallen leaves">
+                    <img src="assets/img/gallery/fallen-leaves-sm.webp" alt="Red, yellow, pink and brown autumn leaves covering the grass" width="675" height="900" loading="lazy">
+                </button>
+                <figcaption>A carpet of fallen leaves</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <button type="button" class="gallery-open" data-full="assets/img/gallery/snowy-night.webp" aria-label="View larger: A snowy night">
+                    <img src="assets/img/gallery/snowy-night-sm.webp" alt="Snow-laden trees lit warm by streetlights along a snowy path at night" width="720" height="900" loading="lazy">
+                </button>
+                <figcaption>A snowy night</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <button type="button" class="gallery-open" data-full="assets/img/gallery/lone-tree.webp" aria-label="View larger: A lone tree against the sky">
+                    <img src="assets/img/gallery/lone-tree-sm.webp" alt="A tall single tree with a slender trunk reaching into a bright blue sky with soft white clouds" width="900" height="900" loading="lazy">
+                </button>
+                <figcaption>A lone tree against the sky</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <button type="button" class="gallery-open" data-full="assets/img/gallery/dusk-reeds.webp" aria-label="View larger: Dusk over the reeds">
+                    <img src="assets/img/gallery/dusk-reeds-sm.webp" alt="Wispy clouds in a deep blue evening sky fading to orange at the horizon behind silhouetted reeds" width="675" height="900" loading="lazy">
+                </button>
+                <figcaption>Dusk over the reeds</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <button type="button" class="gallery-open" data-full="assets/img/gallery/lichen-summit.webp" aria-label="View larger: Lichen and distant peaks">
+                    <img src="assets/img/gallery/lichen-summit-sm.webp" alt="A lichen-covered boulder in front of forested mountains under grey clouds" width="900" height="675" loading="lazy">
+                </button>
+                <figcaption>Lichen and distant peaks</figcaption>
+            </figure>
+        </div>
+        <p class="card gallery-empty">Photos coming soon.</p>
+    </section>
+
     <footer>
         <p>© 2026 Fatemeh N. Nokabadi</p>
     </footer>
 
 </div>
+
+<dialog class="lightbox" aria-label="Photo viewer">
+    <figure>
+        <figcaption></figcaption>
+    </figure>
+    <button type="button" class="lightbox-btn lightbox-close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <button type="button" class="lightbox-btn lightbox-prev" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+    <button type="button" class="lightbox-btn lightbox-next" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+</dialog>
+
+<script>
+    // Gallery viewer: click a photo to see it full size; arrow keys / swipe to move, Esc to close.
+    (function () {
+        var dialog = document.querySelector('.lightbox');
+        var buttons = Array.prototype.slice.call(document.querySelectorAll('.gallery-open'));
+        if (!dialog || !dialog.showModal || !buttons.length) return;
+        var caption = dialog.querySelector('figcaption');
+        var img = document.createElement('img');
+        img.alt = '';
+        caption.parentNode.insertBefore(img, caption);
+        var current = 0;
+
+        function show(i) {
+            current = (i + buttons.length) % buttons.length;
+            var thumb = buttons[current].querySelector('img');
+            var fig = buttons[current].closest('figure').querySelector('figcaption');
+            img.src = buttons[current].getAttribute('data-full') || thumb.currentSrc || thumb.src;
+            img.alt = thumb.alt;
+            caption.textContent = fig ? fig.textContent : '';
+            caption.hidden = !fig;
+        }
+
+        buttons.forEach(function (b, i) {
+            b.addEventListener('click', function () { show(i); dialog.showModal(); });
+        });
+        dialog.addEventListener('close', function () { buttons[current].focus(); });
+        dialog.querySelector('.lightbox-close').addEventListener('click', function () { dialog.close(); });
+        dialog.querySelector('.lightbox-prev').addEventListener('click', function () { show(current - 1); });
+        dialog.querySelector('.lightbox-next').addEventListener('click', function () { show(current + 1); });
+        if (buttons.length < 2) {
+            dialog.querySelector('.lightbox-prev').hidden = true;
+            dialog.querySelector('.lightbox-next').hidden = true;
+        }
+        dialog.addEventListener('keydown', function (e) {
+            if (e.key === 'ArrowLeft') show(current - 1);
+            else if (e.key === 'ArrowRight') show(current + 1);
+        });
+        // Clicking the dark backdrop (outside the photo) closes the viewer.
+        dialog.addEventListener('click', function (e) { if (e.target === dialog) dialog.close(); });
+        var startX = null;
+        dialog.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; }, { passive: true });
+        dialog.addEventListener('touchend', function (e) {
+            if (startX === null) return;
+            var dx = e.changedTouches[0].clientX - startX;
+            if (Math.abs(dx) > 50) show(current + (dx < 0 ? 1 : -1));
+            startX = null;
+        });
+    })();
+</script>
 
 <script>
     // Panels stay visible without JavaScript; with it, show one tab at a time.

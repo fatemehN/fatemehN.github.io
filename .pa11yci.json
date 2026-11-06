@@ -12,6 +12,7 @@
   "urls": [
     "http://localhost:8080/index.html",
     "http://localhost:8080/index.html#publications",
+    "http://localhost:8080/index.html#gallery",
     {
       "url": "http://localhost:8080/index.html?dark",
       "actions": [
