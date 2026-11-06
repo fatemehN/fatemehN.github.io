@@ -176,6 +176,7 @@ h1 {
 /* ---------- Tabs ---------- */
 
 .tab-bar {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -222,9 +223,47 @@ h1 {
     to { opacity: 1; transform: none; }
 }
 
+.has-indicator .tab[aria-selected="true"] {
+    border-bottom-color: transparent;
+}
+
+.tab-indicator {
+    position: absolute;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--accent);
+    pointer-events: none;
+}
+
+.tab-indicator.ready {
+    transition: left 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), top 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), width 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Project and publication cards lift slightly on hover. */
+.card.project,
+.card.pub {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card.project:hover,
+.card.pub:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-border);
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+}
+
 @media (prefers-reduced-motion: reduce) {
     .tab-panel:not([hidden]) {
         animation: none;
+    }
+    .tab-indicator.ready,
+    .card.project,
+    .card.pub {
+        transition: none;
+    }
+    .card.project:hover,
+    .card.pub:hover {
+        transform: none;
     }
 }
 
