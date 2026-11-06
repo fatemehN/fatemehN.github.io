@@ -734,6 +734,12 @@ footer {
     text-align: center;
 }
 
+.gallery-meta {
+    display: block;
+    margin-top: 2px;
+    font-size: 12px;
+}
+
 .lightbox-btn {
     position: absolute;
     display: inline-flex;
