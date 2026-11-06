@@ -587,8 +587,7 @@ footer {
 /* ---------- Figures ---------- */
 
 /* Figures are drawn on white, so they sit on a white panel in both themes. */
-.project-figure,
-.pub-thumb {
+.project-figure {
     display: block;
     background: #fff;
     border: 1px solid var(--border);
@@ -597,14 +596,12 @@ footer {
     transition: border-color 0.15s, box-shadow 0.15s;
 }
 
-.project-figure:hover,
-.pub-thumb:hover {
+.project-figure:hover {
     border-color: var(--accent-border);
     box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
 }
 
-.project-figure img,
-.pub-thumb img {
+.project-figure img {
     display: block;
     width: 100%;
     height: 100%;
@@ -617,28 +614,9 @@ footer {
     height: 240px;
 }
 
-.card.pub {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    gap: 20px;
-    align-items: start;
-}
-
-.pub-thumb {
-    padding: 6px;
-    height: 130px;
-}
-
 @media (max-width: 600px) {
     .project-figure {
         height: 170px;
         padding: 8px;
-    }
-    .card.pub {
-        grid-template-columns: 1fr;
-        gap: 14px;
-    }
-    .pub-thumb {
-        height: 150px;
     }
 }
