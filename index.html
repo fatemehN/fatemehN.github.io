@@ -21,6 +21,9 @@
     <meta name="twitter:image" content="https://fatemehn.github.io/assets/img/profile.png">
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap">
     <link rel="stylesheet" href="style.css">
 
     <script type="application/ld+json">
@@ -73,9 +76,15 @@
           </div>
         </header>
     
+    <!-- TABS -->
+    <div class="tabs" role="tablist" aria-label="Sections">
+        <button type="button" class="tab" role="tab" id="tab-about" aria-controls="about" aria-selected="true">About</button>
+        <button type="button" class="tab" role="tab" id="tab-projects" aria-controls="projects" aria-selected="false" tabindex="-1">Projects</button>
+        <button type="button" class="tab" role="tab" id="tab-academic-service" aria-controls="academic-service" aria-selected="false" tabindex="-1">Academic Service</button>
+    </div>
+
     <!-- ABOUT -->
-    <section>
-        <h2>About</h2>
+    <section id="about" class="tab-panel" role="tabpanel" aria-labelledby="tab-about">
         <div class="card">
             <p>
                 I’m a Machine Learning Scientist with a Ph.D. in Electrical Engineering from <a href="https://www.ulaval.ca/">Université Laval</a> and <a href="https://mila.quebec/en/">Mila</a>. I build and evaluate machine learning systems, bridging research and real-world applications.
@@ -93,10 +102,7 @@
     </section>
 
     <!-- PROJECTS -->
-    <section>
-    <h2>Projects</h2>
-
-    <section class="project-carousel" aria-label="Projects">
+    <section id="projects" class="tab-panel" role="tabpanel" aria-labelledby="tab-projects">
 
     <div class="card project-slide">
         <div class="project-title">Multimodal Models for Document Understanding</div>
@@ -189,20 +195,66 @@
 
     </section>
 
-</section>
-
-<section>
-    <h2 id="academic-service">Academic Service</h2>
-        <ul>
-          <li><strong>Peer Reviewer</strong> – BMVC 2026, CVPR 2025, Transactions on Machine Learning Research (TMLR), Springer Nature</li>
-        </ul>
-</section>
+    <!-- ACADEMIC SERVICE -->
+    <section id="academic-service" class="tab-panel" role="tabpanel" aria-labelledby="tab-academic-service">
+        <div class="card">
+            <ul>
+                <li><strong>Peer Reviewer</strong> – BMVC 2026, CVPR 2025, Transactions on Machine Learning Research (TMLR), Springer Nature</li>
+            </ul>
+        </div>
+    </section>
 
     <footer>
         <p>© 2026 Fatemeh N. Nokabadi</p>
     </footer>
 
 </div>
+
+<script>
+    // Panels stay visible without JavaScript; with it, show one tab at a time.
+    (function () {
+        var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+
+        function select(tab, moveFocus) {
+            tabs.forEach(function (t) {
+                var active = t === tab;
+                t.setAttribute('aria-selected', active ? 'true' : 'false');
+                t.tabIndex = active ? 0 : -1;
+                document.getElementById(t.getAttribute('aria-controls')).hidden = !active;
+            });
+            if (moveFocus) tab.focus();
+        }
+
+        function tabForHash() {
+            var id = location.hash.slice(1);
+            return tabs.filter(function (t) { return t.getAttribute('aria-controls') === id; })[0] || tabs[0];
+        }
+
+        tabs.forEach(function (tab, i) {
+            tab.addEventListener('click', function () {
+                select(tab, false);
+                history.replaceState(null, '', '#' + tab.getAttribute('aria-controls'));
+            });
+            tab.addEventListener('keydown', function (e) {
+                var next = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: tabs.length - 1 }[e.key];
+                if (next === undefined) return;
+                e.preventDefault();
+                tabs[(next + tabs.length) % tabs.length].click();
+                tabs[(next + tabs.length) % tabs.length].focus();
+            });
+        });
+
+        // Keep the tab bar in view instead of jumping to the panel's anchor.
+        function showHashTab() {
+            select(tabForHash(), false);
+            window.scrollTo(0, 0);
+        }
+
+        window.addEventListener('hashchange', showHashTab);
+        window.addEventListener('load', showHashTab);
+        select(tabForHash(), false);
+    })();
+</script>
 
 </body>
 </html>
