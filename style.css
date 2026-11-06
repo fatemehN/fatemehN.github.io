@@ -427,6 +427,20 @@ li::marker {
     margin: 2px 0 12px;
 }
 
+/* Year headings inside the Publications tab. */
+h2.pub-year {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-subtle);
+    font-variant-numeric: tabular-nums;
+    margin: 32px 0 0;
+    padding-bottom: 6px;
+}
+
+.pub-year-group:first-child h2.pub-year {
+    margin-top: 24px;
+}
+
 .pub-links {
     display: flex;
     flex-wrap: wrap;
