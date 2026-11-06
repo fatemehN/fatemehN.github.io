@@ -390,21 +390,88 @@
     <!-- GALLERY -->
     <section id="gallery" class="tab-panel" role="tabpanel" aria-labelledby="tab-gallery">
         <div class="card">
-            <h2 class="card-heading">Looking Up</h2>
-            <p class="gallery-intro">Away from models and datasets, I photograph the sky: sunsets, cloudscapes and the light at dusk. Here are some favourites.</p>
+            <h2 class="card-heading">Sky &amp; Nature</h2>
+            <p class="gallery-intro">Away from models and datasets, I photograph the sky and the natural world: sunsets, storms, starry nights and the light on a landscape. Here are some favourites.</p>
         </div>
         <!--
-            To add a photo: put the file in assets/img/sky/ and copy this block into the grid below.
-            Give width/height (in pixels) so the page doesn't jump while photos load.
+            To add a photo: put a small version (about 900px, for the grid) and a large one (about 2000px,
+            for the full-screen view) in assets/img/gallery/, then copy this block into the grid below.
+            Give the small version's width/height so the page doesn't jump while photos load.
 
             <figure class="gallery-item">
-                <button type="button" class="gallery-open" aria-label="View larger: Sunset over the river">
-                    <img src="assets/img/sky/sunset-river.webp" alt="Orange sunset over the river" width="1600" height="1067" loading="lazy">
+                <button type="button" class="gallery-open" data-full="assets/img/gallery/sunset-river.webp" aria-label="View larger: Sunset over the river">
+                    <img src="assets/img/gallery/sunset-river-sm.webp" alt="Orange sunset over the river" width="900" height="600" loading="lazy">
                 </button>
                 <figcaption>Sunset over the river · Quebec City, 2025</figcaption>
             </figure>
         -->
         <div class="gallery-grid">
+            <figure class="gallery-item">
+                <button type="button" class="gallery-open" data-full="assets/img/gallery/ice-coated-trees.webp" aria-label="View larger: Ice-coated branches at sunrise">
+                    <img src="assets/img/gallery/ice-coated-trees-sm.webp" alt="Tall trees coated in ice glittering in low winter sun against a blue sky, over a snowy path" width="675" height="900" loading="lazy">
+                </button>
+                <figcaption>Ice-coated branches at sunrise</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <button type="button" class="gallery-open" data-full="assets/img/gallery/river-sunset.webp" aria-label="View larger: Sunset over the river">
+                    <img src="assets/img/gallery/river-sunset-sm.webp" alt="An orange sun setting over a wide river, its reflection a bright golden path across the water to a rocky shore" width="675" height="900" loading="lazy">
+                </button>
+                <figcaption>Sunset over the river</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <button type="button" class="gallery-open" data-full="assets/img/gallery/rain-over-lake.webp" aria-label="View larger: Rain sweeping over the lake">
+                    <img src="assets/img/gallery/rain-over-lake-sm.webp" alt="View from a mountaintop of rain curtains falling over forested hills and a small lake" width="900" height="675" loading="lazy">
+                </button>
+                <figcaption>Rain sweeping over the lake</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <button type="button" class="gallery-open" data-full="assets/img/gallery/milky-way-autumn.webp" aria-label="View larger: The Milky Way through autumn leaves">
+                    <img src="assets/img/gallery/milky-way-autumn-sm.webp" alt="The Milky Way across a dark starry sky, framed by orange-lit autumn branches" width="900" height="675" loading="lazy">
+                </button>
+                <figcaption>The Milky Way through autumn leaves</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <button type="button" class="gallery-open" data-full="assets/img/gallery/shelf-cloud-geese.webp" aria-label="View larger: Shelf cloud and migrating geese">
+                    <img src="assets/img/gallery/shelf-cloud-geese-sm.webp" alt="A long V of geese flying beneath the edge of a huge layered shelf cloud over an icy river" width="675" height="900" loading="lazy">
+                </button>
+                <figcaption>Shelf cloud and migrating geese</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <button type="button" class="gallery-open" data-full="assets/img/gallery/fiery-clouds.webp" aria-label="View larger: Clouds on fire at dusk">
+                    <img src="assets/img/gallery/fiery-clouds-sm.webp" alt="A band of clouds glowing bright orange and gold at sunset above silhouetted trees and buildings" width="900" height="675" loading="lazy">
+                </button>
+                <figcaption>Clouds on fire at dusk</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <button type="button" class="gallery-open" data-full="assets/img/gallery/marina-golden-hour.webp" aria-label="View larger: Golden hour at the marina">
+                    <img src="assets/img/gallery/marina-golden-hour-sm.webp" alt="Sailboats moored in a calm bay reflecting golden-lit clouds and forested mountains" width="900" height="676" loading="lazy">
+                </button>
+                <figcaption>Golden hour at the marina</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <button type="button" class="gallery-open" data-full="assets/img/gallery/storm-over-valley.webp" aria-label="View larger: A storm building over the valley">
+                    <img src="assets/img/gallery/storm-over-valley-sm.webp" alt="Dark storm clouds and falling rain over a wide forested valley, seen from a granite cliff" width="900" height="675" loading="lazy">
+                </button>
+                <figcaption>A storm building over the valley</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <button type="button" class="gallery-open" data-full="assets/img/gallery/snowy-night.webp" aria-label="View larger: A snowy night">
+                    <img src="assets/img/gallery/snowy-night-sm.webp" alt="Snow-laden trees lit warm by streetlights along a snowy path at night" width="720" height="900" loading="lazy">
+                </button>
+                <figcaption>A snowy night</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <button type="button" class="gallery-open" data-full="assets/img/gallery/dusk-reeds.webp" aria-label="View larger: Dusk over the reeds">
+                    <img src="assets/img/gallery/dusk-reeds-sm.webp" alt="Wispy clouds in a deep blue evening sky fading to orange at the horizon behind silhouetted reeds" width="675" height="900" loading="lazy">
+                </button>
+                <figcaption>Dusk over the reeds</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <button type="button" class="gallery-open" data-full="assets/img/gallery/lichen-summit.webp" aria-label="View larger: Lichen and distant peaks">
+                    <img src="assets/img/gallery/lichen-summit-sm.webp" alt="A lichen-covered boulder in front of forested mountains under grey clouds" width="900" height="675" loading="lazy">
+                </button>
+                <figcaption>Lichen and distant peaks</figcaption>
+            </figure>
         </div>
         <p class="card gallery-empty">Photos coming soon.</p>
     </section>
@@ -440,7 +507,7 @@
             current = (i + buttons.length) % buttons.length;
             var thumb = buttons[current].querySelector('img');
             var fig = buttons[current].closest('figure').querySelector('figcaption');
-            img.src = thumb.currentSrc || thumb.src;
+            img.src = buttons[current].getAttribute('data-full') || thumb.currentSrc || thumb.src;
             img.alt = thumb.alt;
             caption.textContent = fig ? fig.textContent : '';
             caption.hidden = !fig;
