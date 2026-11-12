@@ -100,16 +100,16 @@
     <section id="about" class="tab-panel" role="tabpanel" aria-labelledby="tab-about">
         <div class="card about">
             <p>
-                I am a Machine Learning Scientist with over a decade of experience in computer vision and machine learning. I hold a Ph.D. in Electrical Engineering from <a href="https://www.ulaval.ca/">Université Laval</a>, where I conducted my doctoral research in collaboration with <a href="https://mila.quebec/en/">Mila – Quebec AI Institute</a>, under the supervision of <a href="https://christiangagne.net/english/">Prof. Christian Gagné</a> and <a href="https://vision.gel.ulaval.ca/~jflalonde/">Prof. Jean-François Lalonde</a>.
+                I am a Machine Learning Scientist with over a decade of experience developing computer vision and machine learning solutions, spanning original algorithm development, deep learning research, and applied AI systems. I hold a Ph.D. in Electrical Engineering from <a href="https://www.ulaval.ca/">Université Laval</a>, where I conducted doctoral research in collaboration with <a href="https://mila.quebec/en/">Mila – Quebec AI Institute</a>, under the supervision of <a href="https://christiangagne.net/english/">Prof. Christian Gagné</a> and <a href="https://vision.gel.ulaval.ca/~jflalonde/">Prof. Jean-François Lalonde</a>.
             </p>
             <p>
-                My work spans video understanding, object detection and tracking, model robustness, and multimodal vision-language models. I enjoy bridging research and practical applications, developing models and learning systems that are both effective and reliable.
+                My expertise spans video understanding, object detection and tracking, adversarial robustness, and multimodal vision-language models. I have developed novel learning algorithms, trained and evaluated deep learning architectures, and explored generative approaches to improve the robustness and reliability of visual systems.
             </p>
             <p>
-                Currently, I work at <a href="https://www.canada.ca/en/employment-social-development.html">Employment and Social Development Canada</a>, focusing on multimodal AI and document intelligence, including fine-tuning vision-language and recognition models for privacy-sensitive applications.
+                Currently, I work at <a href="https://www.canada.ca/en/employment-social-development.html">Employment and Social Development Canada</a>, focusing on multimodal AI and document intelligence. My work involves fine-tuning vision-language and recognition models, developing training and evaluation pipelines, and building synthetic-data generation workflows for privacy-sensitive applications.
             </p>
             <p>
-                My research has been published in venues including TMLR and CRV, and presented at NeurIPS and ICML. I am particularly interested in advancing applied AI, exploring emerging technologies, and turning challenging research problems into practical solutions.
+                I enjoy working at the intersection of research and engineering: translating challenging problems into effective learning systems through rigorous experimentation, model optimization, and practical implementation.
             </p>
         </div>
         <div class="card">
@@ -128,92 +128,58 @@
     <!-- PROJECTS -->
     <section id="projects" class="tab-panel" role="tabpanel" aria-labelledby="tab-projects">
     <article class="card project">
-        <h2 class="project-title">Multimodal Models for Document Understanding</h2>
-        <div class="chips"><span class="chip chip-venue">ESDC</span><span class="chip">Vision-Language Models</span><span class="chip">Document AI</span><span class="chip">Fine-tuning</span><span class="chip">Synthetic Data</span></div>
+        <h2 class="project-title">Multimodal Document Intelligence</h2>
+        <div class="chips"><span class="chip chip-venue">ESDC</span><span class="chip">Vision-Language Models</span><span class="chip">Document AI</span><span class="chip">OCR</span><span class="chip">Synthetic Data</span></div>
         <ul>
-            <li>Led model development for a domain-specific visual document-understanding system based on vision-language models (VLMs), from dataset design and model architecture through training and evaluation.</li>
-            <li>Fine-tuned open-weight models from the Qwen-VL family and TrOCR using Hugging Face Transformers, integrating them into an existing multi-model recognition pipeline.</li>
-            <li>Designed field-level prompting strategies for VLMs after diagnosing hallucinations under whole-document prompting.</li>
-            <li>Co-designed custom loss functions tailored to the data distribution, improving recognition of French accented characters.</li>
-            <li>Built a synthetic data generation system with automatic annotation, removing the need to manually label privacy-sensitive material.</li>
-            <li>Developing detection and recognition models for multiple stages of the OCR pipeline across diverse document types.</li>
-            <li>Worked under strict privacy requirements and limited compute in an offline environment, with training pipelines on Azure ML.</li>
+            <li>Fine-tuned vision-language models, including Qwen2.5-VL, for understanding complex, privacy-sensitive documents, from dataset design through training and evaluation.</li>
+            <li>Built training, validation, and evaluation pipelines for handwriting and text recognition with Hugging Face Transformers, integrating Qwen-based models and TrOCR into an existing multi-model OCR system.</li>
+            <li>Designed field-level prompting strategies to reduce hallucinations, and custom training objectives to improve recognition of challenging text, including French accented characters.</li>
+            <li>Created an automatically annotated synthetic-data pipeline that reduces reliance on manually labeled sensitive documents.</li>
         </ul>
     </article>
 
     <article class="card project">
-        <h2 class="project-title">Robustness Evaluation of Vision Models</h2>
-        <div class="chips"><span class="chip chip-venue">TMLR 2024</span><span class="chip chip-venue">CRV 2025</span><span class="chip chip-venue">NeurIPS 2024</span><span class="chip">Adversarial ML</span><span class="chip">Object Tracking</span><span class="chip">Vision Transformers</span></div>
+        <h2 class="project-title">Adversarial Robustness of Visual Object Trackers</h2>
+        <div class="chips"><span class="chip chip-venue">TMLR 2024</span><span class="chip chip-venue">NeurIPS 2024</span><span class="chip chip-venue">CRV 2025</span><span class="chip">Adversarial ML</span><span class="chip">Vision Transformers</span></div>
         <a class="project-figure" href="assets/img/figures/abbg.webp" target="_blank" rel="noopener"><img src="assets/img/figures/abbg.webp" alt="Tracker outputs on three video sequences with no attack and under the SPARK, RTAA, TrackPGD and ABBG attacks" width="720" height="339" loading="lazy"></a>
         <ul>
-            <li>Stress-tested state-of-the-art transformer trackers (MixFormer, OSTrack, TransT-M, ROMTrack, RTS) on GOT-10k, VOT2022 and UAV123 with white-box attacks that operate through predicted bounding boxes and segmentation masks.</li>
-            <li>Proposed ABBG, a single-bounding-box attack that remains effective across transformer trackers where prior methods fail.</li>
-            <li>Introduced TrackPGD, a white-box attack built on an object-binary-mask proxy that applies to mask-based trackers earlier attacks could not target.</li>
-            <li>Led a systematic reproducibility study across attacks, tracker architectures and perturbation budgets, awarded the TMLR Reproducibility Certification.</li>
+            <li>Evaluated the adversarial robustness of transformer-based visual object trackers across multiple architectures and benchmarks, including GOT-10k, VOT2022, and UAV123.</li>
+            <li>Developed TrackPGD, a white-box adversarial attack built on object binary masks that targets mask-based trackers earlier attacks could not.</li>
+            <li>Proposed ABBG, an adversarial bounding-box generation attack that remains effective across transformer trackers where prior methods fail.</li>
+            <li>Conducted a reproducibility study of adversarial attacks across perturbation budgets and tracker architectures, awarded the TMLR Reproducibility Certification.</li>
             <li>Investigated diffusion-based adversarial purification for video, characterizing the temporal-consistency limits of frame-wise approaches.</li>
         </ul>
-        <div class="project-links">
-            <div class="link-group"><span class="link-label">Reproducibility Study</span><a class="pill" href="https://lvsn.github.io/ReproStudy/" target="_blank" rel="noopener">Website</a><a class="pill" href="https://openreview.net/forum?id=FEEKR0Vl9s" target="_blank" rel="noopener">Paper</a><a class="pill" href="https://github.com/fatemehN/ReproducibilityStudy" target="_blank" rel="noopener">Code</a><a class="pill" href="https://neurips.cc/virtual/2024/poster/99343" target="_blank" rel="noopener">Talk</a></div>
-            <div class="link-group"><span class="link-label">TrackPGD</span><a class="pill" href="https://lvsn.github.io/TrackPGD/" target="_blank" rel="noopener">Website</a><a class="pill" href="https://crv.pubpub.org/pub/9aj2g0hb/release/1" target="_blank" rel="noopener">Paper</a><a class="pill" href="https://github.com/fatemehN/TrackPGD" target="_blank" rel="noopener">Code</a><a class="pill" href="https://neurips.cc/virtual/2024/100197" target="_blank" rel="noopener">Talk</a></div>
-            <div class="link-group"><span class="link-label">ABBG</span><a class="pill" href="https://openreview.net/forum?id=PRQFtvakYN" target="_blank" rel="noopener">Paper</a><a class="pill" href="https://github.com/fatemehN/ABBG" target="_blank" rel="noopener">Code</a><a class="pill" href="https://neurips.cc/virtual/2024/100211" target="_blank" rel="noopener">Talk</a></div>
-        </div>
     </article>
 
     <article class="card project">
-        <h2 class="project-title">Representation Learning for Video Understanding</h2>
-        <div class="chips"><span class="chip chip-venue">WiML @ ICML 2024</span><span class="chip">Representation Learning</span><span class="chip">Reinforcement Learning</span><span class="chip">Video Tracking</span></div>
-        <a class="project-figure" href="assets/img/figures/bmvae.webp" target="_blank" rel="noopener"><img src="assets/img/figures/bmvae.webp" alt="Beta-Multivariational Autoencoder: encoder, multivariate Gaussian bottleneck and mask decoder" width="1127" height="628" loading="lazy"></a>
+        <h2 class="project-title">Real-Time Multi-Object Tracking</h2>
+        <div class="chips"><span class="chip">Computer Vision</span><span class="chip">Object Tracking</span><span class="chip">C++</span><span class="chip">MATLAB</span><span class="chip">OpenCV</span></div>
         <ul>
-            <li>Framed single-object tracking as a reinforcement-learning episodic task with a Soft-Actor-Critic agent learning a motion policy from video frames.</li>
-            <li>Proposed the &beta;-Multivariational Autoencoder (&beta;MVAE) and a U-Net variant (&beta;MVUNet) to learn an entangled Multivariate Gaussian prior (mean vector and covariance matrix) over the tracker's correlated motion parameters directly from frame patches.</li>
-            <li>Jointly trained the decoder to predict the target's binary segmentation mask, so a single network learns the motion distribution and the per-frame object mask used by the tracker.</li>
-            <li>Avoided the posterior collapse that flow-based baselines (RealNVP, IAF, planar and radial flows) showed on the same data.</li>
-            <li>Curated a custom single-object tracking dataset derived from YouTube-VOS.</li>
-        </ul>
-        <div class="project-links">
-            <div class="link-group"><a class="pill" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4364375" target="_blank" rel="noopener">Paper</a><a class="pill" href="https://github.com/fatemehN/entangled_representation" target="_blank" rel="noopener">Code</a><a class="pill" href="https://www.youtube.com/watch?v=EUA3tJLeZyg" target="_blank" rel="noopener">Talk</a></div>
-        </div>
-    </article>
-
-    <article class="card project">
-        <h2 class="project-title">Visual Authentication System</h2>
-        <div class="chips"><span class="chip chip-venue">ORIGYN Foundation</span><span class="chip">Fine-grained Recognition</span><span class="chip">Verification</span><span class="chip">AWS</span></div>
-        <ul>
-            <li>Built computer vision pipelines for luxury product authentication, combining wavelet-based signal features with learned texture and micro-detail models.</li>
-            <li>Leveraged subtle visual cues for fine-grained authenticity verification.</li>
-            <li>Automated model-integration CI/CD on AWS to shorten deployment time.</li>
-        </ul>
-    </article>
-
-    <article class="card project">
-        <h2 class="project-title">Shoe-Size Matching Prototype</h2>
-        <div class="chips"><span class="chip chip-venue">Technologie Intelligence Image</span><span class="chip">Instance Segmentation</span><span class="chip">Mask R-CNN</span></div>
-        <ul>
-            <li>Prototyped the computer vision backend for a planned shoe-size-matching mobile app, using Mask R-CNN foot segmentation.</li>
-            <li>Provided recommendations on data collection and on optimizing inference for future integration into the app.</li>
+            <li>Designed and implemented real-time multi-object tracking algorithms for cluttered video scenes and moving-camera environments.</li>
+            <li>Developed a MATLAB/C++ tracking framework using OpenCV and visual saliency techniques to prioritize targets and improve computational efficiency.</li>
         </ul>
     </article>
 
     <article class="card project">
         <h2 class="project-title">Graph-Based Salient Object Detection</h2>
-        <div class="chips"><span class="chip chip-venue">MTAP 2018</span><span class="chip chip-venue">SIVP 2018</span><span class="chip chip-venue">SPIS 2015</span><span class="chip">Saliency Detection</span><span class="chip">Graph Methods</span></div>
+        <div class="chips"><span class="chip chip-venue">MTAP 2018</span><span class="chip chip-venue">SIVP 2018</span><span class="chip chip-venue">SPIS 2015</span><span class="chip">Graph-Based Vision</span><span class="chip">Saliency Detection</span></div>
         <a class="project-figure" href="assets/img/figures/saliency-multi-graph.webp" target="_blank" rel="noopener"><img src="assets/img/figures/saliency-multi-graph.webp" alt="Saliency maps on MSRA10K images from the local, global and high-contrast graph method" width="790" height="297" loading="lazy"></a>
         <ul>
-            <li>Developed graph-based saliency detection algorithms using local, global, and mixed feature representations.</li>
-            <li>Proposed multiple methods including random graph and global contrast graph approaches for salient object detection in images.</li>
-            <li>The multi-graph approach outperformed state-of-the-art unsupervised methods on MSRA10K, SED2 and ECSSD.</li>
+            <li>Developed graph-based salient object detection methods using local, global, and high-contrast visual representations.</li>
+            <li>Proposed random-graph and global-contrast approaches, demonstrating improved performance over existing unsupervised methods on standard saliency benchmarks, including MSRA10K, SED2, and ECSSD.</li>
         </ul>
         <div class="project-links">
-            <div class="link-group"><a class="pill" href="https://link.springer.com/article/10.1007/s11760-017-1205-5" target="_blank" rel="noopener">SIVP 2018 paper</a><a class="pill" href="https://link.springer.com/article/10.1007/s11042-018-5668-3" target="_blank" rel="noopener">MTAP 2018 paper</a><a class="pill" href="https://ieeexplore.ieee.org/abstract/document/7422332/" target="_blank" rel="noopener">SPIS 2015 paper</a><a class="pill" href="assets/img/certificates/bcnc-2015-certificate.jpg" target="_blank" rel="noopener">BCNC 2015 certificate</a></div>
+            <div class="link-group"><a class="pill" href="assets/img/certificates/bcnc-2015-certificate.jpg" target="_blank" rel="noopener">BCNC 2015 certificate</a></div>
         </div>
     </article>
 
     <article class="card project">
-        <h2 class="project-title">Real-Time Multi-Object Tracking for Moving Cameras</h2>
-        <div class="chips"><span class="chip">Multi-Object Tracking</span><span class="chip">Real-Time</span><span class="chip">C++ / OpenCV</span></div>
+        <h2 class="project-title">Visual Authentication and Fine-Grained Recognition</h2>
+        <div class="chips"><span class="chip chip-venue">ORIGYN Foundation</span><span class="chip">Fine-Grained Recognition</span><span class="chip">Computer Vision</span><span class="chip">AWS</span></div>
         <ul>
-            <li>Researched and implemented real-time multi-object tracking algorithms for cluttered video frames, incorporating salient object detection to prioritize targets.</li>
-            <li>Designed a MATLAB and C++ tracking system using OpenCV for moving-camera video streams, using quaternion Fourier transform-based saliency to speed up tracking through algorithmic redesign rather than extra compute.</li>
+            <li>Developed computer vision pipelines for luxury-product authentication, combining signal-processing features with deep-learning-based texture and fine-detail representations.</li>
+            <li>Explored fine-grained visual cues for distinguishing authentic products from counterfeits.</li>
+            <li>Automated model-integration on AWS to streamline deployment processes.</li>
         </ul>
     </article>
 
