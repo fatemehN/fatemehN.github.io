@@ -598,43 +598,6 @@ footer {
     font-size: 15px;
 }
 
-/* ---------- Figures ---------- */
-
-/* Figures are drawn on white, so they sit on a white panel in both themes. */
-.project-figure {
-    display: block;
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: border-color 0.15s, box-shadow 0.15s;
-}
-
-.project-figure:hover {
-    border-color: var(--accent-border);
-    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
-}
-
-.project-figure img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.project-figure {
-    margin-top: 16px;
-    padding: 12px;
-    height: 240px;
-}
-
-@media (max-width: 600px) {
-    .project-figure {
-        height: 170px;
-        padding: 8px;
-    }
-}
-
 /* ---------- Gallery ---------- */
 
 .gallery-intro {
